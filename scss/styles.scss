@@ -1,0 +1,81 @@
+//style header, set background image
+.header {
+    min-height: 1000px;
+    background: 
+        //adding gradient overlay to image 
+        //with opacity 0.8
+        //to make text readable
+        linear-gradient(
+        to bottom right, rgba(0,0,0,0.8),
+        rgba(0,0,0,0.8)), 
+        url('../images/header-background.jpg') 
+        center center no-repeat;
+    background-size: cover;
+}
+
+//invitation section background overlay image
+.invitation-bg{
+    background: linear-gradient(
+      to bottom right,
+      rgba(0, 0, 0, 0.8),
+      rgba(0, 0, 0, 0.8)
+    ),
+    url('../images/invitation-background.jpg') 
+        center center no-repeat;
+  background-size: cover;
+}
+
+// on smaller screens - @992px
+@media (max-width: 992px){
+    //make navbar dark 
+    .navbar{
+        background: var(--bs-dark);
+    }
+
+    //make header 800px
+    .header {
+        height: 800px !important;
+        min-height: 800px !important;
+    }
+
+    //adjust header carousel
+    .header.slide{
+        width: 90%;
+        margin: 0 auto;
+    }
+
+    //make text container in header 100%
+    // and reduce font size
+    .header .text-container{
+        width: 100% !important;
+        font-size: 16px;
+    }
+
+    //reduce padding for register section
+    .register{
+        padding: 40px 0 !important;
+    }
+
+    //make register section heading center
+    .register h2{
+        text-align: center;
+    }
+
+    //increase summary section width
+    //reduce top margin
+    .summary{
+        margin-top: 0 !important;
+        width: 90% !important;
+    }
+}
+
+//style to reduce carousel slider image
+.header .slide {
+    width: 90%;
+    margin: 0 auto;//0 on t/b, auto on l/r
+}
+
+//navbar transition effect to dark
+.navbar {
+    transition: all 0.5s ease-in-out;
+}
